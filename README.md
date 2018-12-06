@@ -1,5 +1,10 @@
 # switch_biomod_demo
 
+```
+$biodynamo --version
+v0.1.0-135-g39a8687
+```
+
 The desired behaviour would be a switch of the biomodule from S1Module() to S2Module().
 The function to do that is 
 ```cpp
