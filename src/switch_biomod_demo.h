@@ -136,7 +136,7 @@ public:
     void SetBioModule(int type) {
         // Here I'd like to remove S1Module and add S2Module ... i.e. switch from cell_type_ 1 to cell_type_ 2
         if (type == 2) {
-            const auto* s1mod = this.GetBiologyModules<S1Module>()[0]; // <- doesn't work
+            const auto* s1mod = this->template GetBiologyModules<S1Module>()[0]; // <- doesn't work
             this->RemoveBiologyModule(s1mod); // <- doesn't work
             this->AddBiologyModule(S2Module());
             std::cout << "switch to biomodule S2" << std::endl;
