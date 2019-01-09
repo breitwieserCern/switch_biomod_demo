@@ -53,8 +53,7 @@ namespace bdm {
             // intracellular substance quantity is below threshold
             // so now I'd like to switch the bio module from S1 to S2
             if (currentCounterSubQuant < counter_sub_quant_threshold) {
-
-                //  cell->SetBioModule(2);  // uncomment this line to call the module switch function
+                cell->SetBioModule(2);  // uncomment this line to call the module switch function
 
             }
         }
@@ -136,8 +135,8 @@ public:
     void SetBioModule(int type) {
         // Here I'd like to remove S1Module and add S2Module ... i.e. switch from cell_type_ 1 to cell_type_ 2
         if (type == 2) {
-            const auto* s1mod = this->template GetBiologyModules<S1Module>()[0]; // <- doesn't work
-            this->RemoveBiologyModule(s1mod); // <- doesn't work
+            const auto* s1mod = this->template GetBiologyModules<S1Module>()[0];
+            this->RemoveBiologyModule(s1mod);
             this->AddBiologyModule(S2Module());
             std::cout << "switch to biomodule S2" << std::endl;
         }
