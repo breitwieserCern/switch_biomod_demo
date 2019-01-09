@@ -53,7 +53,7 @@ namespace bdm {
             // intracellular substance quantity is below threshold
             // so now I'd like to switch the bio module from S1 to S2
             if (currentCounterSubQuant < counter_sub_quant_threshold) {
-                cell->SetBioModule(2);  // uncomment this line to call the module switch function
+                cell->SetBioModule(2); // <- this results in runtime error when running the simulation
 
             }
         }
